@@ -11,3 +11,23 @@ Another key part of the Project Dashboard is the ease of use for Project Manager
 Finally, the Project Dashboard allows for final approval from the portfolio manager, in case there is a mistake in an update; portfolio managers can also edit all updates prior to approval to fix spelling errors etc.
 
 The Project Dashboard allows for a comprehensive view of a portfolio of projects and makes it easy for the Portfolio Managers to gather and produce information to executives. If you have additional questions, please reach out to the contact information provided.
+
+## High Level Flow
+![High Level Flow](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Images/project_dashboard_process_flow.png "Logo Title Text 1")
+
+##Installation & Configuration Guide
+1.	Use the “src” folder and deploy it to the target org where you want to install this application.
+2.	Refer to the Technical Design Document in the [Documents](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Documents/ProjectDashboard-TechnicalDesignDocument.docx) folder to assign proper Permission Sets, Page Layouts etc.
+3.	The application sends an email to all project owners to update/create the project pulse to update the project using the [ProjDash_EmailReminderScheduler class](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/src/classes/ProjDash_EmailReminderScheduler.cls). Schedule this class based on the desired time to send email.
+4.	If an OWD email address is to be used to send emails, please go to the above class and uncomment the lines 53-61 and replace the DisplayName in line 57 with your OWD email address name.
+5.	The default phase values are Concept Approval, Initiating, Planning, Executing and Close-out/Close. To change these values to any other values please follow the steps below.
+  * Go to Set Up-->Custom Labels
+  * To Change the phase1 value, update the text in the ProjDash_Tracker_Phase1 custom label.
+  * To change phase 2 value, update the text in the ProjDash_Tracker_Phase2 custom label.
+  * To change phase 3 values, update the text in ProjDash_Tracker_Phase3 custom label.
+  * To change phase 4 value, update the text in the ProjDash_Tracker_Phase4 custom label.
+  * To change phase 5 value, update the text in the ProjDash_Tracker_Phase5 custom label.
+  * Now go the custom object , ProjDash_Project__c and update the picklist values of the Phase__c field  with the new custom label --       values and exactly in the same order(Phase1 to phase5)
+  * Phase 5 is not displayed on the tracker on the ProjectDashboard Visualforce. But when the status is set to complete and phase is         Close-Out/Close  the overall project status is complete and the tracker will display the same.
+6.	To change the status values follow the same procedure and update the respective custom labels for status fields.
+7.	For further details refer to the Technical Design Document in the [Documents](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Documents/ProjectDashboard-TechnicalDesignDocument.docx) folder.

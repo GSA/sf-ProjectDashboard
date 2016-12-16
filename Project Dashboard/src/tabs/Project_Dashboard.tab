@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>ProjDash - Custom VF tab for opening the Project Dashboard Visualforce page</description>
+    <label>Project Dashboard</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom84: Presenter</motif>
+    <page>ProjectDashboard</page>
+</CustomTab>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>ProjDash - This custom object holds all pulses for a project</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Accomplishments__c</fullName>
+        <description>Project Pulse Accomplishments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter individual Accomplishments on a separate line</inlineHelpText>
+        <label>Accomplishments</label>
+        <length>600</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Action_Items__c</fullName>
+        <description>Project Pulse Action Items</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter individual Action Items on a separate line</inlineHelpText>
+        <label>Action Items</label>
+        <length>600</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Blockers__c</fullName>
+        <description>Project Pulse Blockers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter individual Blockers on a separate line</inlineHelpText>
+        <label>Blockers</label>
+        <length>600</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Escalations__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter separate Escalations in the following format:
+1 - 
+2 - 
+3 -</inlineHelpText>
+        <label>Escalations</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phase 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Close-Out/Close</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <referenceTo>ProjDash_Project__c</referenceTo>
+        <relationshipLabel>Project Pulses</relationshipLabel>
+        <relationshipName>Project_Pulses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Pulse_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>On Approval of the pulse record, as a part of Approval action this fields need to be updated to trigger the process builder.</description>
+        <externalId>false</externalId>
+        <label>Pulse Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Project Pulse</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Name__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Pulse_Approved__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PP-{00000}</displayFormat>
+        <label>Project Pulse</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Project Pulses</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Project_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Phase__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Phase__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Project_Name__c</lookupFilterFields>
+        <lookupFilterFields>Phase__c</lookupFilterFields>
+        <lookupFilterFields>CREATEDBY_USER</lookupFilterFields>
+        <lookupFilterFields>CREATED_DATE</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Project_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Phase__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATED_DATE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Project_Name__c</searchFilterFields>
+        <searchFilterFields>Phase__c</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchResultsAdditionalFields>Project_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Phase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

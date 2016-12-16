@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ProjDash_KeyProjects_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProjDash_KeyProjects Title</shortDescription>
+        <value>Key Projects for My Organization</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_NokeyProjErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message for No Key Projects Selected</shortDescription>
+        <value>No Key Projects selected</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_PageTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Title</shortDescription>
+        <value>Project Dashboard</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Status_four</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Status Value 4</shortDescription>
+        <value>On Track</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Status_one</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Status Value 1</shortDescription>
+        <value>At Risk</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Status_three</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Status Value 3</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Status_two</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Status Value 2</shortDescription>
+        <value>Past Due</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Tracker_Phase1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Tracker Phase 1</shortDescription>
+        <value>Phase 1</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Tracker_Phase2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Tracker Phase 2</shortDescription>
+        <value>Phase 2</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Tracker_Phase3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Tracker Phase 3</shortDescription>
+        <value>Phase 3</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Tracker_Phase4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Tracker Phase 4</shortDescription>
+        <value>Phase 4</value>
+    </labels>
+    <labels>
+        <fullName>ProjDash_Tracker_Phase5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Tracker Stage 5</shortDescription>
+        <value>Close-Out/Close</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ProjDash_Managers</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ProjDash_Owners</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Action_Items__c</field>
+        <field>Accomplishments__c</field>
+        <field>Project_Name__c</field>
+        <field>Phase__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>ProjDash_Managers</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Project Dashboard Manager approves all submitted Project Pulse records to update the Project Dashboard with approved pulse</description>
+        <label>Manager Approval</label>
+        <name>Manager_Approval</name>
+    </approvalStep>
+    <description>ProjDash - This approval process is submitted by the individual Project Manager to the Program Manager for approval on all project pulse records</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalActions>
+        <action>
+            <name>ProjDash_ProjectPulse_pulseApprvedToTrue</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>ProjDash-ProjectPulseApproval</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,4 +1,4 @@
-# sf_ProjectDashboard
+# Project Dashboard
 ## Overview
 Many Project Portfolio Managers have difficulty reporting valuable project information to high level executives in a clear and concise manner. They also have difficulty gathering the necessary information from Project Managers to fulfill this reporting requirement. Most managers rely on presentations to communicate status, but updating these can be laborious and time consuming. Also, emailing Project Managers for status updates becomes cumbersome; and a constant annoyance to both PM’s and portfolio managers. Also, PM’s may not have the time to type an update every week to send to the portfolio manager. All of this leads to poor data quality, and poor reporting. To solve this, the Project Dashboard application was created.
 
@@ -13,12 +13,12 @@ Finally, the Project Dashboard allows for final approval from the portfolio mana
 The Project Dashboard allows for a comprehensive view of a portfolio of projects and makes it easy for the Portfolio Managers to gather and produce information to executives. If you have additional questions, please reach out to the contact information provided.
 
 ## High Level Flow
-![High Level Flow](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Images/project_dashboard_process_flow.png "Logo Title Text 1")
+![High Level Flow](images/project_dashboard_process_flow.png "Logo Title Text 1")
 
 ##Installation & Configuration Guide
 1.	Use the “src” folder and deploy it to the target org where you want to install this application.
-2.	Refer to the Technical Design Document in the [Documents](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Documents/ProjectDashboard-TechnicalDesignDocument.docx) folder to assign proper Permission Sets, Page Layouts etc.
-3.	The application sends an email to all project owners to update/create the project pulse to update the project using the [ProjDash_EmailReminderScheduler class](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/src/classes/ProjDash_EmailReminderScheduler.cls). Schedule this class based on the desired time to send email.
+2.	Refer to the [Technical Design Document](technicalDesign.md), to assign proper Permission Sets, Page Layouts etc.
+3.	The application sends an email to all project owners to update/create the project pulse to update the project using the [ProjDash_EmailReminderScheduler class](src/classes/ProjDash_EmailReminderScheduler.cls). Schedule this class based on the desired time to send email.
 4.	If an OWD email address is to be used to send emails, please go to the above class and uncomment the lines 53-61 and replace the DisplayName in line 57 with your OWD email address name.
 5.	The default phase values are Concept Approval, Initiating, Planning, Executing and Close-out/Close. To change these values to any other values please follow the steps below.
   * Go to Set Up-->Custom Labels
@@ -30,4 +30,4 @@ The Project Dashboard allows for a comprehensive view of a portfolio of projects
   * Now go the custom object , ProjDash_Project__c and update the picklist values of the Phase__c field  with the new custom label --       values and exactly in the same order(Phase1 to phase5)
   * Phase 5 is not displayed on the tracker on the ProjectDashboard Visualforce. But when the status is set to complete and phase is         Close-Out/Close  the overall project status is complete and the tracker will display the same.
 6.	To change the status values follow the same procedure and update the respective custom labels for status fields.
-7.	For further details refer to the Technical Design Document in the [Documents](https://github.com/GSA/sf_ProjectDashboard/blob/master/Project%20Dashboard/Documents/ProjectDashboard-TechnicalDesignDocument.docx) folder.
+7.	For further details refer to the [Technical Design Document](technicalDesign.md).

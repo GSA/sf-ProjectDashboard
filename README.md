@@ -15,7 +15,7 @@ The Project Dashboard allows for a comprehensive view of a portfolio of projects
 ## High Level Flow
 ![High Level Flow](images/project_dashboard_process_flow.png "Logo Title Text 1")
 
-##Installation & Configuration Guide
+## Installation & Configuration Guide
 1.	Use the “src” folder and deploy it to the target org where you want to install this application.
 2.	Refer to the [Technical Design Document](technicalDesign.md), to assign proper Permission Sets, Page Layouts etc.
 3.	The application sends an email to all project owners to update/create the project pulse to update the project using the [ProjDash_EmailReminderScheduler class](src/classes/ProjDash_EmailReminderScheduler.cls). Schedule this class based on the desired time to send email.
